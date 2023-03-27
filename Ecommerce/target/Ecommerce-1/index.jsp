@@ -9,6 +9,7 @@
     </head>
     <body>
         <%
+            out.print("its done\n");
             
               out.print(FactoryProvider.getfactory());
 
