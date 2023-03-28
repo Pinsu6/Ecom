@@ -1,3 +1,6 @@
+com/learn/mycart/entities/Category.class
 com/ecom/resources/JavaEE8Resource.class
+com/learn/mycart/entities/Product.class
+com/learn/mycart/entities/User.class
+com/ecom/FactoryProvider.class
 com/ecom/JAXRSConfiguration.class
-FactoryProvider.class

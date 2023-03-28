@@ -1,13 +1,105 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.learn.mycart.entities;
 
-/**
- *
- * @author prince
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//for auto increment id
+    private int userId;
+    private String userName;
+    private String userEmail;
+    private String userPassword;
+    private String userPhone;
+    private String userPic;
+    private String userAdress;
+
+    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userPic, String userAdress) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userPhone = userPhone;
+        this.userPic = userPic;
+        this.userAdress = userAdress;
+    }
+
+    public User(String userName, String userEmail, String userPassword, String userPhone, String userPic, String userAdress) {
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userPhone = userPhone;
+        this.userPic = userPic;
+        this.userAdress = userAdress;
+    }
+
+    public User() {
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public String getUserPhone() {
+        return userPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
+    }
+
+    public String getUserPic() {
+        return userPic;
+    }
+
+    public void setUserPic(String userPic) {
+        this.userPic = userPic;
+    }
+
+    public String getUserAdress() {
+        return userAdress;
+    }
+
+    public void setUserAdress(String userAdress) {
+        this.userAdress = userAdress;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userPic=" + userPic + ", userAdress=" + userAdress + '}';
+    }
+    
     
 }
