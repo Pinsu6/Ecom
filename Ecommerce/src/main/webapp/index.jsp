@@ -5,12 +5,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+        <link rel="stylesheet" href="./css/style.css"/>
 
-        <title>Ecom</title>
+            <title>Ecom</title>
         <%@include file="Components/custom_css_js.jsp" %>
     </head>
-    <body>
+    <body >
         <%@include file="Components/navbar.jsp" %>
         <hr>
         <div class="container mt-1">

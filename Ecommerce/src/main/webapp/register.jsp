@@ -1,8 +1,3 @@
-<%-- 
-    Document   : register
-    Created on : 29-Mar-2023, 12:25:56 PM
-    Author     : prince
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,15 +5,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register Page</title>
+        <link rel="stylesheet" href="./css/style.css"/>
         <%@include file="Components/custom_css_js.jsp" %>
     </head>
-    <body>
+    <body class="bg">
         <%@include file="Components/navbar.jsp" %>
         
             <div class="row mt-5">
-                <div class="col-md-4 offset-md-3">
-                    <div class="card">
-                        <div class="card-body px-5">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card shadow-lg">
+                        <div class="card-body px-6">
                             <h5 class="card-title text-center ">Sign Up!!</h5>
 
 
@@ -45,7 +41,13 @@
                                     <label >User phone</label>
                                     <input type="text" class="form-control" id="phone" placeholder="Enter phone">
                                 </div>
-                                
+                                 <div class="form-group">
+                                    <label >Address</label>
+                                    <textarea type="text" class="form-control" id="address" placeholder="Enter Address"></textarea>
+                                </div>
+                                <center>
+                                <button type="submit" class="btn btn-primary ">Submit</button>
+                                </center>
                             </form>
                         </div>
                     </div>
