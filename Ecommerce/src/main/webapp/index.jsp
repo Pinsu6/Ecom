@@ -5,14 +5,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        
+
+        <title>Ecom</title>
+        <%@include file="Components/custom_css_js.jsp" %>
     </head>
     <body>
-        <%
-            out.print("its done..\n");
-            
-              out.print(FactoryProvider.getfactory());
-
-         %>
+        <%@include file="Components/navbar.jsp" %>
+        <hr>
+        <div class="container mt-1">
+            <h2>Done</h2>
+        </div>
     </body>
 </html>
