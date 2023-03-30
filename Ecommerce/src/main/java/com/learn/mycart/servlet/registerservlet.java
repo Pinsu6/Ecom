@@ -4,12 +4,16 @@
  */
 package com.learn.mycart.servlet;
 
+import com.learn.mycart.entities.User;
+import com.ecom.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -30,17 +34,29 @@ public class registerservlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            String phone = request.getParameter("phone");
-            String address = request.getParameter("address");
-            
-            
-            
-           
+
+            try {
+
+                String name = request.getParameter("name");
+                String email = request.getParameter("email");
+                String password = request.getParameter("password");
+                String phone = request.getParameter("phone");
+                String address = request.getParameter("address");
+
+                User user = new User(name, email, password, phone, "default.jpg", address,"normal");
+                Session hibernate = FactoryProvider.getfactory().openSession();
+                Transaction tx= hibernate.beginTransaction();
+               int userId=(int) hibernate.save(user);
+                tx.commit();
+                hibernate.close();
+                
+                out.print("saved "+userId);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
