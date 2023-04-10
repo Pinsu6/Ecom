@@ -11,11 +11,14 @@
     <body class="bg">
         <%@include file="Components/navbar.jsp" %>
         <div class="container-fluid">
-            <div class="row mt-3">
+            <div class="row mt-3 ">
                 <div class="col-md-4 offset-md-4">
                     <div class="card shadow-lg">
                         <div class="card-body px-6">
                             <center>
+                                <%@include file="Components/signupComponent.jsp" %>
+                                     
+                                    
                                 <img src="./img/programmer.png" title="user icons"" alt="alt" style="width: 20%; "/>
                             </center>
                             <h5 class="card-title text-center mt-1 ">Sign Up!!</h5>

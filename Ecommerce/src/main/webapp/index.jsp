@@ -11,7 +11,9 @@
         <%@include file="Components/custom_css_js.jsp" %>
     </head>
     <body >
+        
         <%@include file="Components/navbar.jsp" %>
+          <%@include file="Components/signupComponent.jsp" %>
         <hr>
         <div class="container mt-1">
             <h2>Done</h2>
