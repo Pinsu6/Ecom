@@ -4,9 +4,17 @@
         <servlet-name>registerservlet</servlet-name>
         <servlet-class>com.learn.mycart.servlet.registerservlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Loginservlet</servlet-name>
+        <servlet-class>com.learn.mycart.servlet.Loginservlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registerservlet</servlet-name>
         <url-pattern>/registerservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Loginservlet</servlet-name>
+        <url-pattern>/Loginservlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
